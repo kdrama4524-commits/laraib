@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>For Laraib ❤️ — Noor ul Hassan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pacifico&display=swap');
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Poppins,sans-serif;background:#050107;color:#fff;overflow:hidden}body{display:flex;justify-content:center}.app{position:relative;width:min(100%,480px);height:100dvh;overflow:hidden;background:radial-gradient(circle at 50% 15%,#3b064e 0,#16001f 32%,#050107 72%)}
+.bg,.bg:before,.bg:after{position:absolute;inset:0;content:"";pointer-events:none}.bg{background:radial-gradient(circle at 20% 30%,#ff149d18 0 2px,transparent 3px),radial-gradient(circle at 80% 70%,#a600ff18 0 2px,transparent 3px);background-size:70px 70px;animation:drift 18s linear infinite}.bg:before{background:linear-gradient(115deg,transparent 0 45%,#ff4bc40b 50%,transparent 55%);animation:rain 7s linear infinite}.bg:after{background:radial-gradient(circle at 50% 55%,#ff0a9d20,transparent 35%)}
+@keyframes drift{to{background-position:140px 140px}}@keyframes rain{from{transform:translateY(-30%)}to{transform:translateY(30%)}}@keyframes pop{0%{opacity:0;transform:scale(.75) translateY(20px)}100%{opacity:1;transform:none}}@keyframes pulse{50%{box-shadow:0 0 35px #ff159e66,0 0 70px #9d00ff33}}@keyframes float{50%{transform:translateY(-8px)}}
+.screen{position:absolute;inset:0;padding:42px 22px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;visibility:hidden;transform:translateY(18px);transition:.55s ease;z-index:2}.screen.active{opacity:1;visibility:visible;transform:none}.small{font-size:12px;color:#f5b6e8;letter-spacing:1.5px}.script{font-family:Pacifico,cursive}.title{font-size:27px;line-height:1.35;margin:16px 0 10px;text-shadow:0 0 20px #ff19a0}.sub{font-size:12px;color:#d8bfd8;line-height:1.7;max-width:330px}.heart{width:86px;height:86px;border-radius:50%;display:grid;place-items:center;font-size:40px;background:#26042d;border:1px solid #ff26ae66;box-shadow:0 0 25px #ff149d55;animation:pulse 2s infinite,float 3s ease-in-out infinite}.btn{border:0;border-radius:28px;padding:13px 25px;font:600 13px Poppins;color:white;background:linear-gradient(90deg,#ff0b91,#8f12ff);box-shadow:0 10px 30px #d5008d44;cursor:pointer;margin-top:22px}.btn.yes{background:linear-gradient(90deg,#00c878,#18e9a0)}.btn.no{background:linear-gradient(90deg,#ff245d,#ff006f)}.choices{display:flex;gap:15px;margin-top:16px}.card{width:min(100%,360px);padding:20px;border:1px solid #ff25b933;border-radius:18px;background:linear-gradient(145deg,#210527dd,#0d0612dd);box-shadow:0 18px 55px #0008;text-align:left}.card p{font-size:12px;line-height:1.85;color:#f3d9ef;margin:0}.card strong{color:#ff55bc}.question{font-size:21px;font-weight:600;margin:14px 0}.bubble{background:#39124a;border-radius:18px 18px 5px 18px;padding:12px 15px;font-size:12px;line-height:1.5;margin:10px 0;max-width:86%;text-align:left}.bubble.me{background:#4a124f;border-radius:18px 18px 18px 5px}.envelope{font-size:70px;filter:drop-shadow(0 0 18px #ff1a9c);animation:float 2s ease-in-out infinite}.choiceNote{font-size:10px;color:#a98da7;margin-top:8px}.progress{position:absolute;top:14px;left:18px;right:18px;height:2px;background:#ffffff12;border-radius:9px;z-index:10}.progress i{display:block;height:100%;width:0;background:#ff25ae;transition:.4s}.footer{position:absolute;bottom:8px;font-size:9px;color:#745d75}.scan-tag{margin-top:20px;padding:9px 15px;border:1px solid #ff36b055;border-radius:999px;background:#25072fcc;color:#ffd8f4;font-size:11px}.tap{animation:float 2.2s ease-in-out infinite}
+#bearPlease{position:absolute;left:50%;bottom:88px;transform:translateX(-50%) translateY(25px) scale(.85);opacity:0;pointer-events:none;z-index:20;padding:12px 18px 14px;border:1px solid #ff5cc688;border-radius:22px;background:linear-gradient(145deg,#2b0638f2,#120316f2);box-shadow:0 16px 45px #000b;text-align:center;transition:.35s ease}.bearFace{font-size:58px;line-height:1}.bearText{margin-top:4px;font-size:12px;color:#ffd8f4;font-weight:600}.bearText::first-letter{font-size:13px}#bearPlease.show{opacity:1;transform:translateX(-50%) translateY(0) scale(1);animation:bearWiggle .55s ease}@keyframes bearWiggle{0%{transform:translateX(-50%) scale(.75) rotate(-4deg)}50%{transform:translateX(-50%) scale(1.05) rotate(3deg)}100%{transform:translateX(-50%) scale(1) rotate(0)}}
+</style>
+</head>
+<body><div class="app"><div class="bg"></div><div class="progress"><i id="bar"></i></div>
+<section class="screen active"><div class="heart">💗</div><div class="small">YOU SCANNED IT...</div><div class="title">Laraib, this little surprise<br>is only for you. ❤️</div><div class="sub">And yes... Noor ul Hassan has something important to say.</div><div class="scan-tag">📱 Scan complete • Surprise unlocked</div><button class="btn tap" data-next="1" onclick="playMusic()">♡ Tap to Begin</button></section>
+<section class="screen"><div class="small">BE HONEST WITH ME...</div><div class="heart">👀</div><div class="question">Laraib, do you like surprises?</div><div class="choices"><button class="btn yes" data-next="2">Yes ❤️</button><button class="btn no" data-next="2">No 😅</button></div></section>
+<section class="screen"><div class="card"><div class="bubble me">I have been wanting to tell you something...</div><div class="bubble">What? 👀</div><div class="bubble me">Something I can't explain in one normal message. ❤️</div><div class="bubble">Then tell me...</div></div><div class="question">Okay... here it is. 🥺</div><button class="btn" data-next="3">Tell me 💌</button></section>
+<section class="screen"><div class="heart">♥</div><div class="title">Laraib...</div><div class="card"><p>Some people slowly become a part of your thoughts without you even realizing it.</p><p style="margin-top:10px">You became that person for me. Your name can make an ordinary day feel different. ❤️</p><p style="margin-top:10px">I don't know exactly what the future holds, but I know who I would love to have beside me.</p></div><button class="btn" data-next="4">Keep going... 🥺</button></section>
+<section class="screen"><div class="envelope">💌</div><div class="small">FROM NOOR UL HASSAN</div><div class="title script">Laraib ❤️</div><div class="sub">I don't want to hide it anymore.</div><div class="question">I like you. A lot.</div><button class="btn" data-next="5">One last thing...</button></section>
+<section class="screen">
+<div class="heart">💗</div>
+<div class="small">ONE THING I NEED YOU TO KNOW</div>
+<div class="title script">I Love You, Laraib ❤️</div>
+<div class="sub">No complicated words... just the truth I have been keeping in my heart.</div>
+<div class="card"><p>— Noor ul Hassan</p></div>
+<button class="btn" type="button" data-next="6">Now... one last question 🥺</button>
+</section>
+<section class="screen"><div class="small">THE QUESTION I'VE BEEN WAITING TO ASK</div><div class="title">Will you be mine? 🥺❤️</div><div class="sub">Not because I want a perfect story... but because I want to make a beautiful one with you.</div><div class="choices"><button class="btn yes" type="button" data-next="7" onclick="playMusic()">YES ❤️</button><button class="btn no" type="button" onclick="nope(this)">NO 😭</button></div><div class="choiceNote">(Please think carefully 😭😂)</div></section>
+<section class="screen"><div class="heart">💖</div><div class="small">IF YOUR ANSWER IS YES...</div><div class="title script">Laraib & Noor ul Hassan</div><div class="card"><p>Then today becomes a very special day for me.</p><p style="margin-top:10px">Thank you for making it this far. ❤️</p><p style="margin-top:10px"><strong>Maybe this is where our story begins.</strong></p></div><div class="sub" style="margin-top:16px">Forever isn't a promise about time. It's a promise about choosing each other.</div></section>
+<div class="footer">Made with ❤️ for Laraib</div><audio id="music" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio></div>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+const bar=document.getElementById('bar');
+const music=document.getElementById('music');
+let current=0;
+
+function show(n){
+  if(n<0 || n>=screens.length) return;
+  screens.forEach((s,i)=>s.classList.toggle('active',i===n));
+  current=n;
+  bar.style.width=(screens.length<=1?100:(n/(screens.length-1)*100))+'%';
+}
+
+function go(n){
+  // Buttons use the visible screen number (1-based).
+  const target = Number(n) - 1;
+  if (Number.isInteger(target) && target >= 0 && target < screens.length) show(target);
+}
+
+// Extra-safe navigation: every button with data-next uses a 0-based screen index.
+document.querySelectorAll('[data-next]').forEach(btn => {
+  btn.addEventListener('click', () => show(Number(btn.dataset.next)));
+});
+
+function playMusic(){
+  if(music) music.play().catch(()=>{});
+}
+
+function nope(b){
+  const messages=[
+    'Please... 🥺',
+    'Laraib, think again 😭❤️',
+    'Itna jaldi NO? 🥺',
+    'Please please... 🐻💗',
+    'Give me one chance? 😭❤️'
+  ];
+  let i=Number(b.dataset.nope||0);
+  b.dataset.nope=(i+1)%messages.length;
+  b.textContent=messages[i];
+  b.animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:350});
+  let bear=document.getElementById('bearPlease');
+  if(!bear){
+    bear=document.createElement('div');
+    bear.id='bearPlease';
+    bear.innerHTML='<div class="bearFace">🐻</div><div class="bearText">Pleaseee Laraib... 🥺❤️</div>';
+    document.querySelector('.app').appendChild(bear);
+  }
+  bear.classList.remove('show');
+  void bear.offsetWidth;
+  bear.classList.add('show');
+}
+show(0);
+</script>
+</body></html>
